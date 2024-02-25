@@ -97,7 +97,7 @@ window.onload = () => {
             memory = undefined;
           }
           break;
-        case 'DEL':
+        case '⟵':
           if (display.value.startsWith('-') && display.value.length === 2) display.value = '';
           else display.value = display.value.slice(0, -1);
           break;
@@ -173,7 +173,7 @@ window.onload = () => {
         xPath = "//button[text()='C']";
         break;
       case 'Backspace':
-        xPath = "//button[text()='DEL']";
+        xPath = "//button[text()='⟵']";
         break;
       default:
         if (e.key.match(/^[0-9\.,\/\*\+-=]$/))
