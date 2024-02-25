@@ -1,0 +1,9 @@
+{
+  "name": "calculator",
+  "author": "Bastien 'BayDev' Vénier <hello@baydev.me> (https://baydev.me)",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/chart.js": "^2.9.41"
+  }
+}
