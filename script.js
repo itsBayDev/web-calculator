@@ -171,9 +171,9 @@ window.onload = () => {
               .replace(/^\./, '0.');
           // Or select the operator and store the first operand
           else {
-            if (display.value && display.value !== '-') {
-              const op = document.getElementsByClassName('selected').item(0);
-              if (op) op.classList.remove('selected'); // Clear the selected operator if any
+            if (memory || (display.value && display.value !== '-')) {
+              const op = document.getElementsByClassName('selected');
+              if (op.length) op[0].classList.remove('selected'); // Clear the selected operator if any
               btn.classList.add('selected'); // Select the new operator
               if (!memory) {
                 memory = Number(display.value);
