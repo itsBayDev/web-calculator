@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO tags -->
     <title>Web Calculators</title>
     <meta name="description" content="Simple numerical & graphing calculators." />
+    <!-- Imports -->
     <link href="style.css" rel="stylesheet" />
     <link href="favicon.ico" rel="icon" />
     <script async src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
     <script src="script.js"></script>
   </head>
   <body class="color">
+    <!-- Color mode switcher -->
     <button id="colorMode" class="color" aria-label="Color mode switcher">
       <svg id="sun" class="color" viewBox="0 0 24 24" fill="none">
         <path
@@ -31,7 +34,9 @@
         />
       </svg>
     </button>
+    <!-- Calculators -->
     <div class="container">
+      <!-- Numerical -->
       <div class="calc color" id="num">
         <input id="display" class="inout color" aria-label="Calculator display" disabled />
         <div id="buttons">
@@ -57,6 +62,7 @@
           <button class="operator">+</button>
         </div>
       </div>
+      <!-- Graphing -->
       <div class="calc color" id="graph">
         <input
           id="function"
