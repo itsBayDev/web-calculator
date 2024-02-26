@@ -1,6 +1,9 @@
-let memory, timeout;
-const precision = 100;
-const xSteps = [...Array(10 * precision + 1).keys()].map(x => (x - 5 * precision) / precision);
+let memory, timeout; // Calculator memory and input timeout
+
+// Steps generation on the x-axis (TODO: make them editable by the user)
+const precision = 100; // Number of steps per unit
+const xSteps = [...Array(10 * precision + 1).keys()].map(x => (x - 5 * precision) / precision); // -5 to 5
+// Printed x-axis ticks
 const ticks = [...Array(11).keys()].map(t => {
   return { value: t * precision, label: t - 5 };
 });
