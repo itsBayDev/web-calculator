@@ -71,10 +71,10 @@ window.onload = () => {
         /abs|ceil|cos|E|exp|floor|log|max|min|PI|pow|round|sign|sin|sqrt|tan/g,
         'Math.$&'
       );
-      if (isNaN(eval(sanitized.replace(/x/g, `(${Math.random()})`)))) throw new Error();
+      if (isNaN(eval(sanitized.replace(/(?<![ae])x/g, `(${Math.random()})`)))) throw new Error();
       feedback.textContent = '';
       timeout = setTimeout(() => {
-        chart.data.datasets[0].data = xSteps.map(x => eval(sanitized.replace(/x/g, `(${x})`)));
+        chart.data.datasets[0].data = xSteps.map(x => eval(sanitized.replace(/(?<![ae])x/g, `(${x})`)));
         chart.update();
       }, 100);
     } catch (e) {
