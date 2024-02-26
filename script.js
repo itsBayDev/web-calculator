@@ -59,7 +59,7 @@ window.onload = () => {
         throw 'Enter an expression';
       }
       const sanitizer = functionInput.value.replace(
-        /abs|ceil|cos|exp|floor|log|max|min|pow|round|sign|sin|sqrt|tan|[x\d\.\/\*\+-]/g,
+        /abs|ceil|cos|E|exp|floor|log|max|min|PI|pow|round|sign|sin|sqrt|tan|[x\d\.\/\*\+-]/g,
         '|'
       );
       let sanitized = functionInput.value.replace(
@@ -68,7 +68,7 @@ window.onload = () => {
       );
       if (functionInput.value !== sanitized) throw new Error();
       sanitized = sanitized.replace(
-        /abs|ceil|cos|exp|floor|log|max|min|pow|round|sign|sin|sqrt|tan/g,
+        /abs|ceil|cos|E|exp|floor|log|max|min|PI|pow|round|sign|sin|sqrt|tan/g,
         'Math.$&'
       );
       if (isNaN(eval(sanitized.replace(/x/g, `(${Math.random()})`)))) throw new Error();
