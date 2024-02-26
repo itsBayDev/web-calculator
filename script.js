@@ -153,7 +153,7 @@ window.onload = () => {
           if (memory !== undefined) {
             const op = document.getElementsByClassName('selected').item(0);
             const result = eval(memory + op.textContent + display.value);
-            display.value = result === Infinity ? 'Undefined' : result;
+            display.value = result * result === Infinity ? 'Undefined' : result;
             op.classList.remove('selected'); // Clear the selected operator
             memory = undefined;
           }
