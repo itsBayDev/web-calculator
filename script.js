@@ -74,7 +74,9 @@ window.onload = () => {
       if (isNaN(eval(sanitized.replace(/(?<![ae])x/g, `(${Math.random()})`)))) throw new Error();
       feedback.textContent = '';
       timeout = setTimeout(() => {
-        chart.data.datasets[0].data = xSteps.map(x => eval(sanitized.replace(/(?<![ae])x/g, `(${x})`)));
+        chart.data.datasets[0].data = xSteps.map(x =>
+          eval(sanitized.replace(/(?<![ae])x/g, `(${x})`))
+        );
         chart.update();
       }, 100);
     } catch (e) {
