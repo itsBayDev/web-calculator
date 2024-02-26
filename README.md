@@ -55,8 +55,10 @@ The calculator supports the following syntax:
 
 ## Areas for improvement
 
+- [ ] Prevent the display from overflowing
 - [ ] Plot functions in a worker to avoid freezing the UI
 - [ ] Make the precision of the graph adjustable by the user
+- [ ] (hard) Find indefinite points to avoid trying to trace them
 
 ## License
 
