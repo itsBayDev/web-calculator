@@ -4,7 +4,7 @@ This is a simple web calculator I made as part of a tiny school project that can
 
 ![Calculator](./assets/screenLight.png)
 
-You can try the calculator [here](https://BayDevCodes.github.io/web-calculator/).
+You can try the calculator [here](https://itsbaydev.github.io/web-calculator/).
 
 ## Features
 
